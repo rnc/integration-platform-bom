@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/*
+* JBoss, Home of Professional Open Source
+* Copyright 2011 Red Hat Inc. and/or its affiliates and other contributors
+* as indicated by the @author tags. All rights reserved.
+* See the copyright.txt in the distribution for a
+* full listing of individual contributors.
+*
+* This copyrighted material is made available to anyone wishing to use,
+* modify, copy, or redistribute it subject to the terms and conditions
+* of the GNU Lesser General Public License, v. 2.1.
+* This program is distributed in the hope that it will be useful, but WITHOUT A
+* WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+* PARTICULAR PURPOSE.  See the GNU Lesser General Public License for more details.
+* You should have received a copy of the GNU Lesser General Public License,
+* v.2.1 along with this distribution; if not, write to the Free Software
+* Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
+* MA  02110-1301, USA.
+*/
+-->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.jboss.ip.component.management</groupId>
+    <artifactId>ip-version-master</artifactId>
+    <version>1.0</version>
+
+    <name>JBoss Integration Platform Version Master</name>
+    <description>Master list of Integration platform component versions</description>
+    <packaging>pom</packaging>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+
+        <kie-commons.version>6.0.0-SNAPSHOT</kie-commons.version>
+        <drools.version>6.0.0-SNAPSHOT</drools.version>
+        <optaplanner.version>${drools.version}</optaplanner.version>
+        <jbpm.version>6.0.0-SNAPSHOT</jbpm.version>
+        <guvnor.version>${drools.version}</guvnor.version>
+        <droolsjbpm-tools.version>${drools.version}</droolsjbpm-tools.version>
+        <droolsjbpm-build-distribution.version>${drools.version}</droolsjbpm-build-distribution.version>
+        <jbpm.designer.version>${jbpm.version}</jbpm.designer.version>
+
+
+        <!-- Switchyard, Drools versions -->
+        <version.org.apache.activemq>5.8.0</version.org.apache.activemq>
+        <version.activity.monitor.model>1.2.1.Final</version.activity.monitor.model>
+        <version.antlr>3.3</version.antlr>
+        <version.arquillian.container>7.1.3.Final</version.arquillian.container>
+        <version.batik>1.7</version.batik>
+        <version.camel>2.10.0</version.camel>
+        <version.commons.collections>3.2.1</version.commons.collections>
+        <version.commons.httpclient>3.1</version.commons.httpclient>
+        <version.commons.net>2.2</version.commons.net>
+        <version.ecj>3.5.1</version.ecj>
+        <version.freemarker>2.3.19</version.freemarker>
+        <version.ftpserver>1.0.6</version.ftpserver>
+        <version.hornetq>2.3.0.CR1</version.hornetq>
+        <version.jettison>1.2</version.jettison>
+        <version.jta>1.1</version.jta>
+        <version.junit>4.10</version.junit>
+        <version.milyn>1.5.1</version.milyn>
+        <version.mina>2.0.4</version.mina>
+        <version.mvel>2.1.5.Final</version.mvel>
+        <version.netty>3.2.6.Final</version.netty>
+        <version.protobuf>2.5.0</version.protobuf>
+        <version.resteasy>2.3.6.Final</version.resteasy>
+        <version.riftsaw.console>2.4.3.Final</version.riftsaw.console>
+        <version.slf4j>1.7.2</version.slf4j>
+        <version.spring>3.0.7.RELEASE</version.spring>
+        <version.weld>1.1.10.Final</version.weld>
+        <version.xml-apis>1.3.04</version.xml-apis>
+        <version.xmlunit>1.3</version.xmlunit>
+        <version.xstream>1.4.1</version.xstream>
+        <version.switchyard>1.0.0-SNAPSHOT</version.switchyard>
+
+
+
+
+        <version.axiom>1.2.8</version.axiom>
+        <version.beanshell>2.0b4</version.beanshell>
+        <version.clojure>1.3.0-alpha5</version.clojure>
+        <version.commons.ssl>0.3.9</version.commons.ssl>
+        <version.forge>1.2.2.Final</version.forge>
+        <version.fungal>0.10.2.Final</version.fungal>
+        <version.groovy>2.0.5</version.groovy>
+        <version.hamcrest>1.1</version.hamcrest>
+        <version.infinispan>5.2.1.Final</version.infinispan>
+        <version.ironjacamar>1.0.15.Final</version.ironjacamar>
+        <version.jbossas>7.2.0.Alpha1-redhat-4</version.jbossas>
+        <version.jbossws.spi>2.1.2.Final</version.jbossws.spi>
+        <version.jbossws.jboss720.server.integration>4.2.0-SNAPSHOT</version.jbossws.jboss720.server.integration>
+        <version.jsch>0.1.48</version.jsch>
+        <version.jruby>1.7.2</version.jruby>
+        <version.jython>2.5.3</version.jython>
+        <version.maven.plugin.plugin>3.1</version.maven.plugin.plugin>
+        <version.mock.javamail>1.9</version.mock.javamail>
+        <version.quartz>1.8.5</version.quartz>
+        <version.qpid>0.18</version.qpid>
+        <version.ognl>3.0.6</version.ognl>
+        <version.protostuff>1.0.7</version.protostuff>
+        <version.riftsaw.ode>3.0.0-SNAPSHOT</version.riftsaw.ode>
+        <version.riftsaw.engine>3.0.0-SNAPSHOT</version.riftsaw.engine>
+        <version.rhino>1.7R2</version.rhino>
+        <version.saxon>9.2.1.5</version.saxon>
+        <version.shrinkwrap.descriptors>2.0.0-alpha-3</version.shrinkwrap.descriptors>
+        <version.xalan>2.7.1-1.jbossorg</version.xalan>
+        <version.xmlbeans>2.2.0</version.xmlbeans>
+        <version.xmlunit>1.1</version.xmlunit>
+        <logback.version>1.0.9</logback.version>
+        <cdi.version>1.0-SP4</cdi.version>
+        <karaf.version>2.3.0</karaf.version>
+        <cxf.version>2.6.6</cxf.version>
+        <pax-exam.version>2.6.0</pax-exam.version>
+        <gwt.version>2.5.0</gwt.version>
+        <bootstrap.version>2.2.1.0</bootstrap.version>
+        <errai.version>2.3.1.Final</errai.version>
+        <gson.version>1.7.2</gson.version>
+        <mvc4g.version>1.0.0-jboss</mvc4g.version>
+        <aether.version>1.13.1</aether.version>
+        <maven.version>3.0.3</maven.version>
+        <jetty.version>6.1.25</jetty.version>
+        <lucene.version>4.0.0</lucene.version>
+        <eclipse.bpmn2.version>0.7.3</eclipse.bpmn2.version>
+        <closure.compiler.version>r1741</closure.compiler.version>
+        <velocity.version>1.6.4</velocity.version>
+        <helix.version>0.6.1-incubating</helix.version>
+        <arquillian.version>1.0.3.Final</arquillian.version>
+        <shrinkwrap.resolver.version>2.0.0-beta-3</shrinkwrap.resolver.version>
+        <uberfire.version>0.2.0-SNAPSHOT</uberfire.version>
+
+    </properties>
+
+</project>
